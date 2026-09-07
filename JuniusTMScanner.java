@@ -55,16 +55,16 @@ class Form {
   public void computePatterns() {
     formPattern = Pattern.compile("<form\\b[^>]>[\\s\\S]?<\/form>", Pattern.CASE_INSENSITIVE); 
 
-    idPattern = Pattern.compile("<form\\b[^>]\\bid\\s=\\s"([\\w])\"", Pattern.CASE_INSENSITIVE);
-    namePattern = Pattern.compile("<form\\b[^>]\\bname\\s=\\s"([\\w])\"", Pattern.CASE_INSENSITIVE);
-    actionPattern = Pattern.compile("<form\\b[^>]\\baction\\s=\\s"([:\\/\\-\\w.])\"", Pattern.CASE_INSENSITIVE); 
-    methodPattern = Pattern.compile("<form\\b[^>]\\bmethod\\s=\\s"([\\w])\"", Pattern.CASE_INSENSITIVE); 
+    idPattern = Pattern.compile("<form\\b[^>]\\bid\\s=\\s\"([\\w])\"", Pattern.CASE_INSENSITIVE);
+    namePattern = Pattern.compile("<form\\b[^>]\\bname\\s=\\s\"([\\w])\"", Pattern.CASE_INSENSITIVE);
+    actionPattern = Pattern.compile("<form\\b[^>]\\baction\\s=\\s\"([:\\/\\-\\w.])\"", Pattern.CASE_INSENSITIVE); 
+    methodPattern = Pattern.compile("<form\\b[^>]\\bmethod\\s=\\s\"([\\w])\"", Pattern.CASE_INSENSITIVE); 
     inputPattern = Pattern.compile("<input\\b[^>]>", Pattern.CASE_INSENSITIVE); 
 
-    inputTypePattern = Pattern.compile("<input\\b[^>]\\btype\\s=\\s"([\\w])\"", Pattern.CASE_INSENSITIVE); 
-    inputNamePattern = Pattern.compile("<input\\b[^>]\\bname\\s=\\s"([\\w])\"", Pattern.CASE_INSENSITIVE); 
-    inputIdPattern = Pattern.compile("<input\\b[^>]\\bid\\s=\\s"([\\w])\"", Pattern.CASE_INSENSITIVE); 
-    inputValuePattern = Pattern.compile("<input\\b[^>]\\bvalue\\s=\\s"([\\w]*)\"", Pattern.CASE_INSENSITIVE);
+    inputTypePattern = Pattern.compile("<input\\b[^>]\\btype\\s=\\s\"([\\w])\"", Pattern.CASE_INSENSITIVE); 
+    inputNamePattern = Pattern.compile("<input\\b[^>]\\bname\\s=\\s\"([\\w])\"", Pattern.CASE_INSENSITIVE); 
+    inputIdPattern = Pattern.compile("<input\\b[^>]\\bid\\s=\\s\"([\\w])\"", Pattern.CASE_INSENSITIVE); 
+    inputValuePattern = Pattern.compile("<input\\b[^>]\\bvalue\\s=\\s\"([\\w]*)\"", Pattern.CASE_INSENSITIVE);
   }
 
   public HttpRequest getHttpRequest() {
